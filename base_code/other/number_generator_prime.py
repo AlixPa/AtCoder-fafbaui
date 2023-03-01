@@ -10,6 +10,7 @@ class generateAllNumbersFromPrime:
   def next_step(self):
     global MAX_NUMBER
     global PRIME_LIST
+    global NUMBER_LIST
 
     NUMBER_LIST.append(self.mult_cur)
 
