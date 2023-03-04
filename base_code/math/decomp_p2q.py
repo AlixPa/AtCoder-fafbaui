@@ -1,6 +1,6 @@
 def decomp_pkq(n, k):
   '''
-  Return (p,q) as a tuple, where n=(p**2)*q
+  Returns (p,q) as a tuple, where n=(p**2)*q
   Decomposition MUST be possible, else it will f**** up
   '''
   r = int(n**(1/(k+1)))

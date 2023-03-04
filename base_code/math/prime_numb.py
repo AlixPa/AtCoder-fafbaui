@@ -1,6 +1,27 @@
 import math
 
-def get_primes(number):
+def primeFactors(number):
+  '''
+  Returns the list of prime factors of a number
+  12 => [2, 2, 3]
+  '''
+  primes = list()
+  while number % 2 == 0:
+    primes.append(2)
+    number = number / 2
+  for i in range(3,int(math.sqrt(number))+1,2):
+    while number % i== 0:
+      primes.append(i)
+      number = number / i
+  if number > 2:
+    primes.append(number)
+  return primes
+
+def getPrimesToNumber(number):
+  '''
+  Returns the list of prime factors under a certain number
+  10 => [2, 3, 5, 7]
+  '''
   prime_number = []
   for i in range(2, number + 1):
     prime_number.append(i)
