@@ -20,3 +20,15 @@ def dichoSearch(k, ls):
       left = center
     else:
       right = center - 1
+
+def addToSorted(ls, e):
+  left = 0
+  right = len(ls)
+  while left < right:
+    center = left + (right - left)//2
+    if ls[center] < e:
+      left = center + 1
+    else:
+      right = center
+  ls.insert(left, e)
+  return ls
