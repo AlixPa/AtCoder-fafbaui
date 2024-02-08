@@ -1,0 +1,4 @@
+*list : str consisting of elements with space
+
+SUM things : sum(i, j) = ls[j] - ls[i-1] (whith list of sums)
+SUM things : 
