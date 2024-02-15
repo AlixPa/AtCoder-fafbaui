@@ -22,6 +22,9 @@ for i in range(n-1):
   graph[i].append((i+1, a))
   graph[i].append((x-1, b))
 
+# graph = dict() (key = vertex, lists of (adj, cost) tuples)
+## Add oriented edge x -> y:
+## graph[x].append((y, cost))
 def lazyDijkstras(graph, root):
   n = len(graph)
   dist = [Inf for _ in range(n)]
