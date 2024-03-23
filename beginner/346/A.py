@@ -11,3 +11,9 @@ def FIS(): return map(float, input().split())
 def FI(): return float(input())
 sys.setrecursionlimit(10**8)
 
+n = II()
+ls_a = LIIS()
+
+ls_b = [ls_a[i]*ls_a[i+1] for i in range(n-1)]
+
+print(*ls_b)
