@@ -5,29 +5,28 @@ class Graph:
     self.graph = defaultdict(list)
     self.V = vertices
 
-  def addEdge(self, u, v):
+  def add_edge(self, u, v):
     self.graph[u].append(v)
 
-  def DFS(self, vertex, visited, stack):
+  def dfs(self, v1, v, visited):
     nb = 0
-    visited[vertex] = True
-    stack.append(vertex)
-    for neighbor in self.graph[vertex]:
-      if not visited[neighbor]:
-        nb += self.DFS(neighbor, visited, stack)
-      elif neighbor in stack:
-        nb += 1
-    stack.pop()
-    visited[vertex] = False
+    if visited[v]:
+      if(v1 == v):
+        return 1
+      return 0
+    visited[v] = True
+
+    for x in self.graph[v]:
+      nb += self.dfs(v1, x, visited)
+    visited[v] = False
     return nb
 
-  def countSimpleCycles(self):
+  def countCycles(self):
     nb = 0
     visited = [False] * (self.V)
-    stack = []
-    for vertex in range(self.V):
-      nb += self.DFS(vertex, visited, stack)
-      visited[vertex] = True
+    for v in range(self.V):
+      nb += self.dfs(v, v, visited)
+      visited[v] = True
     return nb
 
 if __name__ == "__main__":
@@ -35,4 +34,4 @@ if __name__ == "__main__":
   g.add_edge(0, 1)
   g.add_edge(1, 0)
 
-  g.countSimpleCycles()
+  g.countCycles()
