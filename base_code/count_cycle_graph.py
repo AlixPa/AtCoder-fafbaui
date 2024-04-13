@@ -5,7 +5,7 @@ class Graph:
     self.graph = defaultdict(list)
     self.V = vertices
 
-  def add_edge(self, u, v):
+  def addEdge(self, u, v):
     self.graph[u].append(v)
 
   def dfs(self, v1, v, visited):
@@ -31,7 +31,7 @@ class Graph:
 
 if __name__ == "__main__":
   g = Graph(2)
-  g.add_edge(0, 1)
-  g.add_edge(1, 0)
+  g.addEdge(0, 1)
+  g.addEdge(1, 0)
 
   g.countCycles()
