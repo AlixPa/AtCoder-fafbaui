@@ -12,3 +12,14 @@ def FIS(): return map(float, input().split())
 def FI(): return float(input())
 sys.setrecursionlimit(10**8)
 
+_, c = IIS()
+ls_t = LIIS()
+
+nb_candy = 0
+last_time = -math.inf
+for t in ls_t:
+  if t - last_time >= c:
+    nb_candy += 1
+    last_time = t
+
+print(nb_candy)

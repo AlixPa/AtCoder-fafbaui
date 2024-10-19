@@ -1,5 +1,4 @@
 import sys, math, copy, itertools
-from bisect import insort, insort_left, insort_right
 from collections import deque, defaultdict
 from heapq import heappop, heappush, heapify
 def IIS(): return map(int, input().split())
@@ -12,3 +11,9 @@ def FIS(): return map(float, input().split())
 def FI(): return float(input())
 sys.setrecursionlimit(10**8)
 
+nb = 0
+for i in range(1, 13):
+    s = SI()
+    if len(s) == i:
+        nb += 1
+print(nb)

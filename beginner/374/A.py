@@ -12,3 +12,8 @@ def FIS(): return map(float, input().split())
 def FI(): return float(input())
 sys.setrecursionlimit(10**8)
 
+s = SI()
+if s[-3:] == "san":
+    print("Yes")
+else:
+    print("No")

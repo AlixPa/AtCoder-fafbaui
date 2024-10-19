@@ -12,3 +12,18 @@ def FIS(): return map(float, input().split())
 def FI(): return float(input())
 sys.setrecursionlimit(10**8)
 
+s = SI()
+t = SI()
+
+for i in range(min(len(s), len(t))):
+    if s[i] != t[i]:
+        print(i+1)
+        sys.exit(0)
+if len(s) != len(t):
+    print(min(len(s), len(t))+1)
+    sys.exit(0)
+for i in range(len(s)):
+    if s[i] != t[i]:
+        print(i+1)
+        sys.exit(0)
+print(0)
