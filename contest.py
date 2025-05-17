@@ -1,7 +1,8 @@
 import os
+import sys
 
 type_dt = {"b": "beginner", "r": "regular", "g": "grand"}
-url = input("Enter url of contest : ")
+url = sys.argv[1]
 contest_type = type_dt[url.split("/")[-1][1]]
 contest_numb = url.split("/")[-1][3:]
 contest_path = contest_type + "/" + contest_numb

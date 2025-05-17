@@ -1,7 +1,8 @@
 import os
+import sys
 
 dt_contest = {"b": "beginner", "r": "regular", "g": "grand"}
-url = input("Enter url of task : ")
+url = sys.argv[1]
 
 grouped = url.split("/")[-1]
 if grouped[0:3] not in {"abc", "arc", "agc"}:
